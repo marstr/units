@@ -19,6 +19,14 @@ func NewTemperatureFromFahrenheit(t float64) Temperature {
 	return (Temperature(t) + fahrenheitKelvinOffset) * 5 / 9
 }
 
+// Within judges whether or not two temperatures are equal, given an acceptable window.
+func (t Temperature) Within(other, tolerance Temperature) bool {
+	return within(
+		float64(t),
+		float64(other),
+		float64(tolerance))
+}
+
 // Celsius returns a scalar representing the temperature in Celsius.
 func (t Temperature) Celsius() float64 {
 	return float64(t) - celsiusKelvinOffset
