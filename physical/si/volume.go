@@ -29,5 +29,5 @@ func within(a, b, tolerance float64) bool {
 }
 
 func (v Volume) String() string {
-	return fmt.Sprintf("%gL", v)
+	return fmt.Sprintf("%0.2fL", v)
 }
