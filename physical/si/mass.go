@@ -21,5 +21,5 @@ func (m Mass) Within(other, tolerance Mass) bool {
 }
 
 func (m Mass) String() string {
-	return fmt.Sprintf("%gg", m)
+	return fmt.Sprintf("%gKg", m)
 }
