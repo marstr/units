@@ -24,10 +24,10 @@ func ExampleTemperature_Celsius() {
 
 func ExampleTemperature_conversion() {
 	subject := si.NewTemperatureFromCelsius(100)
-	fmt.Printf("%.0f\n", subject.Fahrenheit())
+	fmt.Printf("%.0f °F\n", subject.Fahrenheit())
 	fmt.Println(subject)
 
 	// Output:
-	// 212
+	// 212 °F
 	// 373.2K
 }
