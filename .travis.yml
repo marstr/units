@@ -11,7 +11,7 @@ env:
 matrix:
   fast_finish: true
   allow_failures:
-  - master
+  - go: master
 
 before_install:
   - go get -u golang.org/x/lint/golint
