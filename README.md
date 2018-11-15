@@ -1,4 +1,6 @@
 # Units
+[![godoc](https://godoc.org/github.com/marstr/units?status.svg)](https://godoc.org/github.com/marstr/units)
+[![Build Status](https://travis-ci.com/marstr/units.svg?branch=master)](https://travis-ci.com/marstr/units)
 
 Find yourself wishing that you had type defintions for all of the units in your life, comparable to `time.Time`? This
 library hopes to bring that level of convenience and type safety while working with all sorts of different quantities.

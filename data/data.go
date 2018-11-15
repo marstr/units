@@ -12,21 +12,14 @@ type Data uint64
 
 // The number of bits represented by common denominations of data size.
 const (
-	Bit      = 1
-	Byte     = 8 * Bit
-	Kilobit  = 1024 * Bit
-	Kilobyte = 1024 * Byte
-	Megabit  = 1024 * Kilobit
-	Megabyte = 1024 * Kilobyte
-	Gigabit  = 1024 * Megabit
-	Gigabyte = 1024 * Megabyte
-	Terabit  = 1024 * Gigabit
-	Terabyte = 1024 * Gigabyte
-	Petabit  = 1024 * Terabit
-	Petabyte = 1024 * Terabyte
-	Exabit   = 1024 * Petabit
-	Exabyte  = 1024 * Petabyte
-	DataMax  = math.MaxUint64
+	Byte     Data = 1
+	Kilobyte      = 1024 * Byte
+	Megabyte      = 1024 * Kilobyte
+	Gigabyte      = 1024 * Megabyte
+	Terabyte      = 1024 * Gigabyte
+	Petabyte      = 1024 * Terabyte
+	Exabyte       = 1024 * Petabyte
+	MaxData       = math.MaxUint64
 )
 
 // The suffixes associated with each level of Data capacity.

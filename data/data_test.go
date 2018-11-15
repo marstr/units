@@ -2,31 +2,36 @@ package data_test
 
 import (
 	"fmt"
-	"github.com/marstr/units/data"
 	"testing"
+
+	"github.com/marstr/units/data"
 )
 
 func ExampleData() {
-	mySize := 2 * data.Kilobyte
-
-	fmt.Println(mySize)
-	fmt.Println(mySize / data.Byte)
-
+	capacity := 2 * data.Kilobyte
+	fmt.Println(capacity)
+	fmt.Printf("%d\n", capacity)
 	// Output:
-	// 16384
+	// 2KB
 	// 2048
 }
 
-func TestData_MarshalText(t *testing.T) {
+func Example_sliceAllocation() {
+	buf := make([]byte, 0, 10*data.Megabyte)
+	fmt.Println(cap(buf))
+	// Output:
+	// 10485760
+}
+
+func TestData_String(t *testing.T) {
 	testcases := []struct {
 		Size     data.Data
 		Expected string
 	}{
 		{6*data.Megabyte + 512*data.Kilobyte, "6.5MB"},
 		{6 * data.Megabyte, "6MB"},
-		{4 * data.Bit, "0.5B"},
-		{data.DataMax, "2EB"},
-		{1.5 * data.Exabyte, "1.5EB"},
+		{data.MaxData, "16EB"},
+		{data.Exabyte + 512*data.Petabyte, "1.5EB"},
 	}
 
 	for _, tc := range testcases {
