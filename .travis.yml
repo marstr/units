@@ -1,0 +1,17 @@
+language: go
+
+go:
+  - 1.11
+  - 1.11.x
+  - master
+
+env:
+  - GO111MODULES = on
+
+matrix:
+  fast_finish: true
+  allow_failures:
+  - master
+
+script:
+  - make all
