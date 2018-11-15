@@ -13,5 +13,8 @@ matrix:
   allow_failures:
   - master
 
+before_install:
+  - go get -u golang.org/x/lint/golint
+
 script:
   - make all
